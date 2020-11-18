@@ -37,6 +37,27 @@
             display: none;
         }
     </style>
+        <script>
+        window.onload = function(){
+        
+        var links = document.getElementsByTagName('a');
+        for( var i=0,il = links.length; i< il; i ++ ){
+         links[i].onclick = clickHandler;
+        }
+        
+        function clickHandler(event) {
+        
+        event.preventDefault();
+        
+        setTimeout(function() {
+        
+          location.href = this.href;
+        }, 2000);
+        
+        
+        };
+        };
+        </script>
 
 </head>
 <body style="overflow: hidden;">
@@ -91,27 +112,6 @@
             });
         });
     </script>
-    <script>
-        window.onload = function(){
-        
-        var links = document.getElementsByTagName('a');
-        for( var i=0,il = links.length; i< il; i ++ ){
-         links[i].onclick = clickHandler;
-        }
-        
-        function clickHandler(event) {
-        
-        event.preventDefault();
-        
-        setTimeout(function() {
-        
-          location.href = this.href;
-        }, 2000);
-        
-        
-        };
-        };
-        </script>
         <script>
             window.onclick = myFunction;
             
